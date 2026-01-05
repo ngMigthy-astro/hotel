@@ -1,0 +1,19 @@
+<section class="bg-white py-17.5">
+  <div class="mx-auto px-4 sm:container">
+    <div class="items-center justify-between border-b border-stroke md:flex">
+      <div class="mb-6 w-full">
+        <h2 class="mb-2 text-2xl font-semibold text-dark">
+          {{ title() }}
+        </h2>
+        <p class="text-sm font-medium text-body-color">
+          {{ description() }}
+        </p>
+      </div>
+      <button
+        class="bg-[#216245] text-white font-medium py-3 px-6 rounded-xl flex items-center transition-all duration-200 hover:cursor-pointer">
+        <i [class]="'pi ' + icon()"></i>
+        {{ buttonText() }}
+      </button>
+    </div>
+  </div>
+</section>
