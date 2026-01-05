@@ -1,8 +1,6 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { Router } from '@angular/router';
 
-/**
- *
- */
 @Component({
   selector: 'app-login',
   standalone: true,
@@ -10,4 +8,10 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   imports: [],
   templateUrl: './login.component.html',
 })
-export class LoginComponent {}
+export class LoginComponent {
+  router = inject(Router);
+
+  navigateToRegister(): void {
+    this.router.navigate(['/register']);
+  }
+}
